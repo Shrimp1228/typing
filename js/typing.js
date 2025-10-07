@@ -523,6 +523,12 @@ document.addEventListener("keydown", (e) => {
   // カウントダウン中はすべてのキー入力を無視
   if (isCountdownInProgress) return
   
+  // ゲーム中のTabキーを無効化
+  if (isGameInProgress && e.key === "Tab") {
+    e.preventDefault()
+    return
+  }
+  
   // ゲーム中は入力キー以外を無視
   if (isGameInProgress && e.key !== "Escape") return
 
