@@ -19,7 +19,7 @@
 
 **とりあえずやってみる**
 
-🎮 **[ゲームを開始する](https://Shrimp1228.github.io/typing/typing.html)**
+🎮 **[ゲームを開始する](https://Shrimp1228.github.io/typing/)**
 
 ## カスタマイズする
 
@@ -37,7 +37,7 @@ cd typing
    - ファイルを保存
 
 3. **ゲームを開始**
-   - `typing.html`をブラウザで直接開く
+   - `index.html`をブラウザで直接開く
 
 ### お題のカスタマイズ例
 
