@@ -1,0 +1,346 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  padding: 2rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+h1 {
+  display: none;
+}
+
+#target {
+  font-size: 1.5rem;
+  margin: 1rem auto;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  border-radius: 8px;
+  display: block;
+  width: fit-content;
+}
+
+#yomi {
+  font-size: 1.2rem;
+  margin: 0.5rem auto;
+  color: #ddd;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  border-radius: 5px;
+  display: block;
+  width: fit-content;
+}
+
+#alp {
+  font-size: 1rem;
+  margin: 0.5rem auto;
+  color: #ccc;
+  font-family: monospace;
+  visibility: hidden;
+  min-height: 1.5rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  border-radius: 5px;
+  display: block;
+  width: fit-content;
+}
+
+
+.miss-char {
+  color: #d00;
+  font-weight: bold;
+  background-color: #ffe6e6;
+}
+
+#typingInput {
+  font-size: 1.2rem;
+  width: 300px;
+  text-align: center;
+  margin: 0 auto;
+  display: none;
+  color: #00ff00;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 2px solid #00ff00;
+  border-radius: 5px;
+  padding: 8px;
+}
+
+#result {
+  margin-top: 1rem;
+  font-weight: bold;
+  min-height: 1.5rem;
+}
+
+
+#startScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2rem;
+  z-index: 1000;
+}
+
+#startMessage {
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+#modeSelection {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-size: 1.2rem;
+}
+
+.mode-group, .difficulty-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.mode-title, .difficulty-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.mode-option, .difficulty-option {
+  margin: 0.3rem 0;
+  padding: 0.8rem 1.5rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  color: #ccc;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 300px;
+  text-align: left;
+}
+
+.mode-option:hover, .difficulty-option:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #fff;
+}
+
+.mode-option.selected {
+  background-color: rgba(0, 255, 0, 0.2);
+  border-color: #00ff00;
+  color: #00ff00;
+  font-weight: bold;
+}
+
+.difficulty-option {
+  background-color: rgba(255, 165, 0, 0.1);
+  border-color: rgba(255, 165, 0, 0.4);
+}
+
+.difficulty-option:hover {
+  background-color: rgba(255, 165, 0, 0.2);
+  border-color: rgba(255, 165, 0, 0.6);
+}
+
+#countdown {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #ff6b6b;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* 結果画面スタイル（result.cssから統合） */
+#resultScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1a1a1a;
+  color: white;
+  padding: 1rem;
+  overflow-y: auto;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+#resultTitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #4CAF50;
+}
+
+.result-section {
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: auto;
+}
+
+.result-section h3 {
+  margin-top: 0;
+  color: #87CEEB;
+  border-bottom: 1px solid #555;
+  padding-bottom: 0.5rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.8rem;
+  margin: 1rem 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.stat-item {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 0.8rem;
+  border-radius: 5px;
+  text-align: center;
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+.stat-value {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #FFD700;
+  word-break: break-all;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-top: 0.5rem;
+}
+
+.text-stats-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  min-width: 600px;
+  table-layout: fixed;
+}
+
+.text-stats-table th,
+.text-stats-table td {
+  border: 1px solid #555;
+  padding: 0.4rem;
+  text-align: left;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.text-stats-table th:nth-child(1),
+.text-stats-table td:nth-child(1) {
+  width: 20%;
+}
+
+.text-stats-table th:nth-child(2),
+.text-stats-table td:nth-child(2) {
+  width: 30%;
+}
+
+.text-stats-table th:nth-child(3),
+.text-stats-table td:nth-child(3) {
+  width: 15%;
+}
+
+.text-stats-table th:nth-child(4),
+.text-stats-table td:nth-child(4) {
+  width: 15%;
+}
+
+.text-stats-table th:nth-child(5),
+.text-stats-table td:nth-child(5) {
+  width: 20%;
+}
+
+.text-stats-table th {
+  background-color: rgba(255, 255, 255, 0.1);
+  font-weight: bold;
+}
+
+.sortable {
+  cursor: pointer;
+  user-select: none;
+}
+
+.sortable:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  #resultScreen {
+    padding: 0.5rem;
+  }
+  
+  #resultTitle {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 0.5rem;
+  }
+  
+  .stat-item {
+    padding: 0.5rem;
+  }
+  
+  .stat-value {
+    font-size: 1.1rem;
+  }
+  
+  .text-stats-table {
+    font-size: 0.7rem;
+    min-width: 500px;
+  }
+  
+  .text-stats-table th,
+  .text-stats-table td {
+    padding: 0.3rem;
+  }
+}
+
+/* BGM曲名表示 */
+#currentBgmTitle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  display: none;
+  max-width: 300px;
+  word-break: break-all;
+  text-align: center;
+}

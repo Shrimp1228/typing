@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!--
+  ローマ字入力練習タイピングゲーム
+
+  @author Shrimp1228
+  @license MIT
+  @copyright (c) 2025 Shrimp1228
+-->
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Shrimp1228" />
+    <meta name="description" content="ローマ字入力練習タイピングゲーム" />
+    <title>Typing Practice</title>
+    <link rel="stylesheet" href="css/typing.css" />
+  </head>
+  <body>
+    <h1>Typing Practice</h1>
+    <div id="yomi"></div>
+    <div id="target"></div>
+    <div id="alp"></div>
+    <input id="typingInput" type="text" autocomplete="off" />
+    <p id="result"></p>
+
+    <div id="startScreen">
+      <div id="startMessage">Typing Practice</div>
+      <div id="modeSelection">
+        <div class="mode-group">
+          <div class="mode-title">ゲームモード:</div>
+          <div id="challengeMode" class="mode-option selected"></div>
+          <div id="endlessMode" class="mode-option"></div>
+        </div>
+        <div class="difficulty-group">
+          <div class="difficulty-title">難易度を選択してゲーム開始:</div>
+          <div class="difficulty-option">a: Beginner (初心者)</div>
+          <div class="difficulty-option">b: Intermediate (中級者)</div>
+          <div class="difficulty-option">c: Advanced (上級者)</div>
+        </div>
+      </div>
+      <div id="countdown" style="display: none"></div>
+    </div>
+
+    <div id="currentBgmTitle"></div>
+
+    <div id="resultScreen" style="display: none">
+      <div id="resultTitle">Result</div>
+      <div style="text-align: center; margin-bottom: 1rem; color: #ccc">
+        ESCキー押下でTOPに戻る
+      </div>
+
+      <div class="result-section">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-value" id="finalScore">0</div>
+            <div class="stat-label">Score</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value" id="accuracy">0.00%</div>
+            <div class="stat-label">正確率</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value" id="finalWPM">0</div>
+            <div class="stat-label">WPM</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value" id="totalTime">0.00s</div>
+            <div class="stat-label">トータル時間</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value" id="maxWaitTime">0ms</div>
+            <div class="stat-label">最長待ち時間</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value" id="totalMisses">0</div>
+            <div class="stat-label">ミスタイプ数</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="result-section">
+        <h3>
+          入力文字詳細(タイプミス：赤字、時間のかかった文字：黄色+中黒ルビ)
+        </h3>
+        <table class="text-stats-table">
+          <thead>
+            <tr>
+              <th class="sortable" data-sort="text">文字 ▼</th>
+              <th class="sortable" data-sort="alp">アルファベット ▼</th>
+              <th class="sortable" data-sort="firstSpeed">初速(ms) ▼</th>
+              <th class="sortable" data-sort="maxWaitTime">
+                最長待ち時間(ms) ▼
+              </th>
+              <th class="sortable" data-sort="missCount">タイプミス ▼</th>
+            </tr>
+          </thead>
+          <tbody id="textStatsBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/state.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/audio.js"></script>
+    <script src="js/statistics.js"></script>
+    <script src="js/typing.js"></script>
+  </body>
+</html>
