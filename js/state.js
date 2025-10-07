@@ -15,6 +15,7 @@ let currentTargetText // 現在のタイピング対象文字列
 let lastCompletedTextItem = null // 前回完了したお題アイテム（エンドレスモード用）
 let isGameInProgress = false // ゲーム開始フラグ
 let isProcessingCorrectAnswer = false // 正解処理中フラグ
+let isCountdownInProgress = false // カウントダウン中フラグ
 
 // タイミング管理
 let textStartTime = Date.now() // 個別テキストの開始時間

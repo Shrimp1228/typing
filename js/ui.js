@@ -111,6 +111,9 @@ function startCountdown() {
   startMessageElement.style.display = "none"
   modeSelectionElement.style.display = "none"
   countdownDisplayElement.style.display = "block"
+  
+  // カウントダウン中フラグを有効化
+  isCountdownInProgress = true
 
   let countdownValue = CONFIG.timing.COUNTDOWN_DURATION
   countdownDisplayElement.textContent = countdownValue
@@ -122,6 +125,8 @@ function startCountdown() {
       return
     }
     clearInterval(countdownTimer)
+    // カウントダウン中フラグを無効化
+    isCountdownInProgress = false
     startGame()
   }, 1000)
 }
