@@ -152,7 +152,7 @@ const data = {
       kanji:
         "マイクロサービスアーキテクチャーでは、各コンポーネントがそれぞれ独立してスケールアウトできます。",
       yomi: "マイクロサービスアーキテクチャーでは、かくコンポーネントがそれぞれどくりつしてスケールアウトできます。",
-      alp: "maikurosa-birua-kitekutya-deha,kakukonpo-nentogasorezoredokuritusitesuke-ruautodekimasu.",
+      alp: "maikurosa-bisua-kitekutya-deha,kakukonpo-nentogasorezoredokuritusitesuke-ruautodekimasu.",
     },
     {
       kanji:
