@@ -170,7 +170,7 @@ const data = {
       kanji:
         "レスポンシブウェブデザインでブレイクポイントを適切に設定してユーザビリティを向上させましょう。",
       yomi: "レスポンシブウェブデザインでブレイクポイントをてきせつにせっていしてユーザビリティをこうじょうさせましょう。",
-      alp: "rusuponsibuwebudezaindebureikupointowotekisetunisetteisiteyu-zabirithiwokoujousasemasyou.",
+      alp: "resuponsibuwebudezaindebureikupointowotekisetunisetteisiteyu-zabirithiwokoujousasemasyou.",
     },
   ],
 }
