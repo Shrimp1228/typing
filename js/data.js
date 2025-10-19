@@ -58,7 +58,7 @@ const data = {
     { kanji: "牛乳", yomi: "ぎゅうにゅう", alp: "gyuunyuu" },
     { kanji: "フワフワ", yomi: "ふわふわ", alp: "huwahuwa" },
     { kanji: "ディスク", yomi: "でぃすく", alp: "dhisuku" },
-    { kanji: "ディープラーニング", yomi: "でぃーぷらーにんぐ", alp: "dhi-pura-ning" },
+    { kanji: "ディープラーニング", yomi: "でぃーぷらーにんぐ", alp: "dhi-pura-ningu" },
     { kanji: "ティッシュ", yomi: "てぃっしゅ", alp: "thissyu" },
   ],
   intermediate: [
