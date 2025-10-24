@@ -127,6 +127,11 @@ const data = {
       yomi: "ミドルウェアのアップデートがかんりょうしました。",
       alp: "midoruweanoappude-togakanryousimasita.",
     },
+    {
+      kanji: "生麦生米生卵",
+      yomi: "なむむぎなまごめなまたまご",
+      alp: "namamuginamagomenamatamago",
+    },
   ],
   advanced: [
     {
