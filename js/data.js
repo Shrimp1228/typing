@@ -132,6 +132,11 @@ const data = {
       yomi: "なむむぎなまごめなまたまご",
       alp: "namamuginamagomenamatamago",
     },
+    {
+      kanji: "赤巻紙青巻紙黄巻紙",
+      yomi: "あかまきがみあおまきがみきまきがみ",
+      alp: "akamakigamiaomakigamikimakigami",
+    },
   ],
   advanced: [
     {
